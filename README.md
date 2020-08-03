@@ -1,2 +1,2 @@
 # ngtc.tech
-Website for New Graduate Student Collective
+Website for New Graduate Tech Collective
