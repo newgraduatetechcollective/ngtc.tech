@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    line-height: 1.6;
+    font-size: 14px;
+    background-color: #414042;
+    color: #fff;
+}
+
+a {
+    color: #e8f4f8;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+header {
+    background-image: url("/images/header_bg.jpg");
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh;
+    box-shadow: 5px 12px 10px #383739;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(50, 50, 50, 0.77);
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.nav_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.logo {
+    padding-top: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 20px;
+    letter-spacing: 2px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a::before {
+    /*content: "";
+    width: 50%;
+    height: 4px;
+    display: block;
+    background-color: rgb(0, 134, 175);
+    margin-bottom: 5px;*/
+    display: block;
+    content: '';
+    border-bottom: solid 3px #0098DB;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+nav a:hover::before {
+    /*width: 100%;
+    transition: all .5s;*/
+    transform: scaleX(1);
+}
+
+.home_image img {
+    margin: 50px 0 0 90px;
+    width: 30%;
+}
+
+#main_block {
+    padding-bottom: 20px;
+}
+
+#main_block p {
+    padding: 65px 85px 45px 85px;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    line-height: 1.6;
+}
+
+.learn_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.learn_btn a {
+    text-decoration: none;
+    transition: all .6s linear;
+    text-transform: uppercase;
+}
+
+.learn_btn a img {
+    width: 20px;
+    position: relative;
+    /*to keep it at the same place*/
+    top: 6px;
+    left: 2px;
+}
+
+.learn_btn_img {
+    display: inline;
+    margin-left: 4px;
+}
+
+.learn_btn_img::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    margin-top: 4.5px;
+    transform: rotate(45deg);
+    transition: all .6s linear;
+}
+
+.learn_btn a:hover {
+    color: #0098DB;
+}
+
+.learn_btn a:hover>.learn_btn_img::before {
+    background-color: #0098DB;
+}
+
+
+/*#main_block a:hover {
+    color: #0098DB;
+}*/
+
+hr.hr_left {
+    width: 25%;
+    margin-left: 50px;
+}
+
+#work_block {
+    padding: 65px 85px;
+}
+
+.what_we_do {
+    padding-bottom: 40px;
+}
+
+.work_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.work_img {
+    width: 50%;
+    padding: 20px;
+}
+
+.work_img img {
+    width: 100%;
+}
+
+.branding {
+    width: 50%;
+    margin-left: 20px;
+    padding: 20px 40px;
+}
+
+.branding h3 {
+    margin-bottom: 20px;
+    color: #0098DB;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.branding p {
+    font-size: 12px;
+}
+
+.ux_left,
+.ux_right {
+    width: 50%;
+    padding: 20px;
+}
+
+.ux_left {
+    padding-left: 95px;
+}
+
+.ux_left h3 {
+    margin-bottom: 20px;
+    color: #0098DB;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.pd_left,
+.pd_right {
+    width: 50%;
+    padding: 20px;
+}
+
+.pd_right {
+    padding-left: 45px;
+}
+
+.pd_right h3 {
+    margin-bottom: 20px;
+    color: #0098DB;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+hr.hr_right {
+    margin-left: 70%;
+    margin-right: 30px;
+}
+
+#team_block {
+    padding: 20px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    box-shadow: -5px -12px 10px #383739 inset;
+}
+
+#team_block .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#team_block .learn_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.team_img {
+    width: 50%;
+}
+
+.team_img img {
+    width: 90%;
+}
+
+.team_content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team_content_img {
+    width: 100%;
+}
+
+.team_content .team_content_img img {
+    width: 55%;
+    padding: 10px;
+}
+
+.team_content .team_content_para p {
+    padding: 20px;
+    margin-left: 40px;
+}
+
+#contact_block {
+    background-image: url("/images/Mask Group 9.jpg");
+    background-size: cover;
+    background-position: 50%;
+    height: 65vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact_content {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.contact_img {
+    text-align: center;
+}
+
+.contact_img img {
+    width: 80%;
+    min-width: 320px;
+}
+
+.contact_para {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contact_content .learn_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.about_info,
+.mission_info,
+.work_info,
+.team_info,
+.contact_info {
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 20px 70px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about_info_img,
+.work_info_img,
+.team_info_img,
+.contact_info_img {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.about_info_img img,
+.work_info_img img,
+.team_info_img img,
+.contact_info_img img {
+    width: 25%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.about_container,
+.work_container,
+.team_container,
+.contact_container {
+    box-shadow: 5px -10px 15px #39393a;
+}
+
+.team_table {
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    border: 1px solid #fff;
+}
+
+td {
+    border: 1px solid #fff;
+    padding: 8px;
+}
+
+table td .name {
+    font-weight: 700;
+}
+
+table td .job {
+    color: #0098DB;
+}
+
+footer {
+    padding: 20px;
+}
+
+footer p {
+    color: #ccc;
+    letter-spacing: 0px !important;
+    font-size: 12px;
+}
