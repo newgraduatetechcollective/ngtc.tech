@@ -386,11 +386,34 @@ td {
     padding: 8px;
 }
 
-table td .name {
+table td.name {
     font-weight: 700;
 }
 
-table td .job {
+table td.job {
+    color: #0098DB;
+    font-weight: 700;
+}
+
+.team_members_list {
+    display: grid;
+    justify-content: space-evenly;
+    align-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.member,
+.role,
+.profile {
+    align-self: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.role {
     color: #0098DB;
 }
 
