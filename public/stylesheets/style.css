@@ -53,14 +53,20 @@ header {
     padding: 25px;
 }
 
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+}
+
 .logo {
     padding-top: 10px;
 }
 
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.logo img {
+    width: 75%;
 }
 
 ul {
@@ -80,7 +86,7 @@ nav a {
     font-weight: 700;
 }
 
-nav a::before {
+nav li a::before {
     /*content: "";
     width: 50%;
     height: 4px;
@@ -94,10 +100,58 @@ nav a::before {
     transition: transform 250ms ease-in-out;
 }
 
-nav a:hover::before {
+nav li a:hover::before {
     /*width: 100%;
     transition: all .5s;*/
     transform: scaleX(1);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #e8f4f8;
+    margin: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    ul {
+        position: absolute;
+        right: 0px;
+        height: 84vh;
+        top: 12vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+    nav li {
+        margin: auto;
+    }
+    /*ul li {
+        opacity: 0;
+    }*/
+    .burger {
+        display: block;
+    }
+    .nav-active {
+        background-color: rgba(65, 64, 66, 0.8);
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
 }
 
 .home_image img {
@@ -368,6 +422,46 @@ hr.hr_right {
 .team_container,
 .contact_container {
     box-shadow: 5px -10px 15px #39393a;
+}
+
+.contact_info_form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.contact_details {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.get_in_touch_img {
+    width: 70%;
+}
+
+.get_in_touch_img img {
+    width: 60%;
+}
+
+.contact_info_para {
+    padding: 20px;
+}
+
+.contact_form {
+    width: 50%;
+    padding: 20px;
+    align-self: center;
+    box-shadow: -10px 5px 10px #2f3335;
+}
+
+form {
+    padding: 20px;
+}
+
+.contact_form input {
+    background-color: transparent;
+    border: 0px solid;
 }
 
 .team_table {
