@@ -6,3 +6,9 @@ burger.addEventListener("click", open);
 function open() {
     nav.classList.toggle("nav-active");
 }
+
+function submit_form() {}
+
+function sendRequest(type, link, data) {
+
+}

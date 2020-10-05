@@ -16,6 +16,35 @@
                 <p>Lorem ipsum do quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
+
+        <div class="projects_list"> 
+            <% for(i=0;i<data.length;i++) { %>
+
+            
+            <div class="project">
+                <div class="proj_bg">
+                    <img src="<%=data[i].image%>" alt="ngtc_projects">
+                </div>
+                <div class="content">
+                    <h2 class="proj_name"><%=data[i].project_name%></h2>
+                    <br>
+                    <p class="proj_description"><%=data[i].description%> </p>
+                    <br><br>
+                    <h3 class="proj_branding">Branding : </h3>
+                    <br>
+                    <p class="proj_branding_tags"><%=data[i].branding%></p>
+                    <div class="learn_btn left" style="margin-top: 5px">
+                        <a href="<%=data[i].link%>" target="_blank">LEARN MORE
+                            <div class="learn_btn_img"><img src="/icons/whitearrow.png"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <%
+            }
+            %>
+        </div>
     </div>
 
     <%- include partials/contact_block.ejs %>

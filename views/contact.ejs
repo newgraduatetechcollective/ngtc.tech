@@ -24,18 +24,25 @@
                 </div>
 
                 <div class="contact_form">
-                    <form action="post">
-                        Name: <input type="text" value="" name="name">
-                        <br><br>
-                        Email: <input type="email" value="" name="email">
-                        <br><br>
-                        Subject: <input type="text" value="" name="subject">
-                        <br><br>
-                        Message: <input type="textarea" value="" name="message">  
-                    </form>
+                    <form id="form_details" method="post" action="/contact/store">
+                        <label for="name">Name: </label>
+                        <input type="text" value="" name="name">
+                        
+                        <label for="email">Email: </label>
+                        <input type="email" value="" name="email">
+                        
+                        <label for="subject">Subject: </label>
+                        <input type="text" value="" name="subject">
+                        
+                        <label for="message">Message: </label>
+                        <input type="textarea" value="" name="message">  
 
-                    <div class="learn_btn">
-                        <a href="#">Send
+                        
+                    
+                        <!--<input type="submit" name="" value="Submit">-->
+                    </form>
+                    <div class="learn_btn left" style="margin-top: 5px">
+                        <a href="#" target="_blank">LEARN MORE
                             <div class="learn_btn_img"><img src="/icons/whitearrow.png"></div>
                         </a>
                     </div>
