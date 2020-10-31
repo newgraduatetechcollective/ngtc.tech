@@ -29,6 +29,7 @@ header {
     background-position: 50%;
     height: 100vh;
     box-shadow: 5px 12px 10px #383739;
+    position: relative;
 }
 
 .overlay {
