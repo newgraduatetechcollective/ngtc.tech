@@ -1,10 +1,12 @@
-let burger = document.querySelector(".burger");
-let nav = document.querySelector("ul");
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 
-burger.addEventListener("click", open);
+toggleButton.addEventListener('click', togglefunc);
 
-function open() {
-    nav.classList.toggle("nav-active");
+function togglefunc() {
+    navbarLinks.classList.toggle('active');
+
+    let ul = navbarLinks.childNodes[1];
 }
 
 function submit_form() {}

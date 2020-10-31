@@ -74,8 +74,19 @@ header {
     width: 80%;
 }
 
-.brand-title {
-    width: 30%;
+.nav_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
 }
 
 .logo {
@@ -83,99 +94,67 @@ header {
 }
 
 .logo img {
-    width: 50%;
+    width: 75%;
     min-width: 130px;
 }
 
-.navbar {
+ul {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    color: white;
-    margin: 20px 0;
-    position: relative;
-}
-
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-}
-
-.navbar-links ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.navbar-links li {
     list-style: none;
-    font-weight: bold;
 }
 
-.navbar-links li a {
+nav li {
+    margin: 0 20px;
+    letter-spacing: 2px;
+}
+
+nav a {
     text-decoration: none;
-    color: white;
-    padding: 1rem;
+    font-weight: 700;
+}
+
+nav li a::before {
+    /*content: "";
+    width: 50%;
+    height: 4px;
     display: block;
+    background-color: rgb(0, 134, 175);
+    margin-bottom: 5px;*/
+    display: block;
+    content: '';
+    border-bottom: solid 3px #0098DB;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
 }
 
-.navbar-links li:hover {
-    background-color: #555;
+nav li a:hover::before {
+    /*width: 100%;
+    transition: all .5s;*/
+    transform: scaleX(1);
 }
 
-.toggle-button {
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
+.burger {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    cursor: pointer;
 }
 
-.toggle-button .bar {
+.burger div {
+    width: 25px;
     height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
+    background-color: #e8f4f8;
+    margin: 4px;
 }
 
-@media (max-width:710px) {
-    .toggle-button {
-        display: flex;
-    }
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-        background-color: rgba(35, 35, 36, 0.25);
-        padding: 20px;
-    }
-    .navbar-links li {
-        text-align: center;
-    }
-    .navbar-links li a {
-        padding: .5rem 1rem;
-    }
-    .navbar-links.active {
-        display: flex;
-    }
+.nav-active {
+    transform: translateX(0%);
 }
 
 .home_image img {
-    /*margin: 50px 0 0 90px;*/
-    width: 50%;
-    padding: 80px 0 0 50px;
-    min-width: 300px;
-    max-width: 488px;
+    margin: 50px 0 0 90px;
+    width: 30%;
+    min-width: 200px;
 }
 
 #main_block {
@@ -376,7 +355,7 @@ hr.hr_right {
     background-image: url("/images/Mask Group 9.jpg");
     background-size: cover;
     background-position: 50%;
-    height: 70vh;
+    height: 65vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -443,7 +422,6 @@ hr.hr_right {
 .team_container,
 .contact_container {
     box-shadow: 5px -10px 15px #39393a;
-    padding-top: 20px;
 }
 
 .contact_info_form {
@@ -459,8 +437,7 @@ hr.hr_right {
 }
 
 .get_in_touch_img {
-    width: 100%;
-    text-align: center;
+    width: 70%;
 }
 
 .get_in_touch_img img {
@@ -618,8 +595,41 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    ul {
+        position: absolute;
+        right: 0px;
+        height: 84vh;
+        top: 12vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+    nav li {
+        margin: auto;
+    }
+    /*ul li {
+        opacity: 0;
+    }*/
+    .burger {
+        display: block;
+    }
+    .nav-active {
+        background-color: rgba(65, 64, 66, 0.8);
+    }
     .home_image {
         text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .home_image img {
+        margin-top: 50px;
+        margin-left: 0px !important;
     }
     #main_block p {
         padding: 20px 0;
@@ -680,13 +690,6 @@ body {
     .contact_content .contact_img img {
         max-width: 200px;
     }
-    .contact_info_form {
-        flex-direction: column;
-    }
-    .contact_details,
-    .contact_form {
-        width: 100%;
-    }
     .about_info_img img,
     .work_info_img img,
     .team_info_img img,
@@ -702,22 +705,5 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .container {
-        width: 90%;
-    }
-    .home_image img {
-        padding-left: 0;
-        width: 60%;
-        min-width: unset;
-        max-width: unset;
-    }
-    .contact_img img {
-        min-width: unset !important;
-        max-width: unset !important;
-        width: 80%;
     }
 }
